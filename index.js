@@ -8,7 +8,13 @@ const rl = require('readline').createInterface({
 const util = require('util');
 const input = util.promisify(rl.question)
 const url = 'https://mlangpackagehosting.justa6.repl.co/'
-mlang_path = path.join(__dirname, 'mlang')
+
+
+
+mlang_path = path.join(   __dirname, 'mlang'   )
+
+
+
 
 function username_password(callback){
     rl.question("Username ", (username)=>{
@@ -145,9 +151,9 @@ async function handle_args(){
             await upload(args[1], './'+args[2])
             break
         case undefined:
-            console.log("mpm signup - sign up for mpm account")
-            console.log("mpm install <packagename> - install package called packagename")
-            console.log("mpm upload <packagename> <path> - upload the directory path to mpm as packagename")
+            console.log("MPM signup - sign up for mpm account")
+            console.log("MPM install <packagename> - install package called packagename")
+            console.log("MPM upload <packagename> <path> - upload the directory path to mpm as packagename")
             process.exit(0)
             break
         default:
